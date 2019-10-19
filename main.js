@@ -55,7 +55,7 @@ function redraw(timestamp) {
 	if (lastTimestamp === 0) lastTimestamp = timestamp;
     const frameLength = (timestamp - lastTimestamp) / 1000;
     lastTimestamp = timestamp;
-	/*
+	
 	//Render the gradient
 	context.fillStyle = sky(t/900);
 	context.beginPath();
@@ -63,7 +63,7 @@ function redraw(timestamp) {
 	context.fill();
 	
 	//Draw Background
-    context.drawImage(background, 0, 0);
+    	context.drawImage(background, 0, 0);
 	
 	//Draw Character
 	if (t%40 == 0) {frameS++;}
@@ -89,8 +89,8 @@ function redraw(timestamp) {
 	context.rotate(angle/(4*Math.PI));
 	context.drawImage(clockh, -clockh.width/2, -clockh.height);
 	context.restore();+
-	*/
 	
+	/*(This is for the second part)
 	//Draw Background
 	context.drawImage(background3, 0, 0);
 
@@ -121,13 +121,14 @@ function redraw(timestamp) {
 	}
 	yPos += 2;
 	xPos += 3;
-	
+	*/
 	
 	
 	t++;
 	window.requestAnimationFrame(redraw);
 }
 
+//THis is the positions storage for the second part
 var motionTrailLength = 50;
 var positions = [];
  
@@ -144,6 +145,7 @@ function storeLastPosition(xPos, yPos) {
   }
 }
 
+//The changing sky for the first part
 function sky(c) {
 	c = Math.abs(c) % 6;
 	if (c < 1) {
