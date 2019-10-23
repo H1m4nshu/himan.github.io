@@ -227,7 +227,7 @@ function redraw(timestamp) {
 			context.drawImage(loading2, lx, 0 );
 			lx += 10;
 		}
-		if (lx > 20){
+		if (lx > 0){
 				ly = -1320;
 				animating=false;
 				transition = 4;
